@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Grommet } from 'grommet';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Landing from './scenes/landing/Landing'
+import About from './scenes/about/About'
+import Store from './scenes/store/Store'
+import FAQ from './scenes/faq/FAQ'
 
 const theme = {
   global: {
@@ -23,6 +26,9 @@ class App extends Component {
         <Grommet theme={theme} full>
           <Switch>
             <Route exact path={'/'} component={Landing} />
+            <Route exact path={'/about'} component={About} />
+            <Route exact path={'/shop'} component={Store} />
+            <Route exact path={'/faq'} component={FAQ} />
           </Switch>
         </Grommet>
       </Router>
