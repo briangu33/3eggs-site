@@ -7,6 +7,7 @@ import {
   ResponsiveContext,
 } from 'grommet/es6'
 import { FormClose, Notification } from 'grommet-icons/es6'
+import HeaderBar from '../../components/header-bar/HeaderBar'
 
 const AppBar = (props) => (
   <Box
@@ -33,12 +34,7 @@ class Landing extends Component {
       <ResponsiveContext.Consumer>
         {size => (
           <Box fill>
-            <AppBar>
-              <Heading level='3' margin='none'>My App</Heading>
-              <Button
-                icon={<Notification/>}
-                onClick={() => this.setState({ showSidebar: !showSidebar })}/>
-            </AppBar>
+            <HeaderBar/>
             <Box direction='row' flex overflow={{horizontal: 'hidden'}}>
               <Box flex align='center' justify='center'>
                 app body

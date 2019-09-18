@@ -5,11 +5,15 @@ import Landing from './scenes/landing/Landing'
 import About from './scenes/about/About'
 import Store from './scenes/store/Store'
 import FAQ from './scenes/faq/FAQ'
+import ScreenSizeContext from './components/ScreenSizeContext'
 
 const theme = {
   global: {
+    breakpoints: {
+      medium: 1000
+    },
     colors: {
-      brand: '#228B86',
+      brand: '#4ffcce',
     },
     font: {
       family: 'Open Sans',
@@ -20,17 +24,38 @@ const theme = {
 };
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { width: 0, height: 0 };
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions() {
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
+  }
+
   render() {
     return (
       <Router>
-        <Grommet theme={theme} full>
-          <Switch>
-            <Route exact path={'/'} component={Landing} />
-            <Route exact path={'/about'} component={About} />
-            <Route exact path={'/shop'} component={Store} />
-            <Route exact path={'/faq'} component={FAQ} />
-          </Switch>
-        </Grommet>
+        <ScreenSizeContext.Provider value={ this.state }>
+          <Grommet theme={theme} full>
+              <Switch>
+                <Route exact path={'/'} component={Landing} />
+                <Route exact path={'/about'} component={About} />
+                <Route exact path={'/shop'} component={Store} />
+                <Route exact path={'/faq'} component={FAQ} />
+              </Switch>
+          </Grommet>
+        </ScreenSizeContext.Provider>
       </Router>
     );
   }
