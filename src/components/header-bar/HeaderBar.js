@@ -63,7 +63,7 @@ const bigHeaderBar = (
       align='center'
       justify='center'
       basis='1/3'
-      height='44px'
+      height='40px'
     >
       <Image
         src={logoBlack}
@@ -91,6 +91,7 @@ const bigHeaderBar = (
       <Button
         label='Shop'
         href='/shop'
+        color='accent-1'
       />
     </Box>
   </Box>
@@ -144,7 +145,7 @@ const smallHeaderBar = (
       align='center'
       justify='center'
       basis='1/3'
-      height='44px'
+      height='40px'
     >
       <Image
         src={logoBlack}
@@ -160,6 +161,7 @@ const smallHeaderBar = (
       <Button
         label='Shop'
         href='/shop'
+        color='accent-1'
       />
     </Box>
   </Box>

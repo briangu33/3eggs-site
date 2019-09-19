@@ -1,27 +1,34 @@
 import React, { Component } from 'react';
-import { Grommet } from 'grommet';
+import { grommet, Grommet } from 'grommet';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Landing from './scenes/landing/Landing'
 import About from './scenes/about/About'
 import Store from './scenes/store/Store'
 import FAQ from './scenes/faq/FAQ'
 import ScreenSizeContext from './components/ScreenSizeContext'
+import { deepMerge } from 'grommet/utils'
 
-const theme = {
+const theme = deepMerge(grommet, {
   global: {
     breakpoints: {
       medium: 1000
     },
     colors: {
-      brand: '#4ffcce',
+      brand: '#ffaf54',
+      'accent-1': '#73ffff',
+      'accent-2': '#b973ff',
+      text: '#555555'
     },
     font: {
-      family: 'Open Sans',
+      family: 'Circular Pro',
       size: '14px',
       height: '20px',
     },
   },
-};
+  heading: {
+    font: 'Avenir Next'
+  }
+});
 
 class App extends Component {
   constructor(props) {
