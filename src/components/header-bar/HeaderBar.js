@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import {
   Box,
   Button,
@@ -67,6 +68,8 @@ const bigHeaderBar = (
       <Image
         src={logoBlack}
         height='100%'
+        onClick={() => window.location='/'}
+        style={{cursor: 'pointer'}}
       />
     </Box>
     <Box
