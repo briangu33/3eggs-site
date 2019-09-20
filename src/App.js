@@ -22,11 +22,30 @@ const theme = deepMerge(grommet, {
     font: {
       family: 'Circular Pro',
       size: '14px',
-      height: '20px',
+      height: '16px',
     },
   },
   heading: {
-    font: 'Avenir Next'
+    font: { family: 'Avenir Next' },
+    extend: {
+      color: '#151515'
+    }
+  },
+  text: {
+    extend: {
+      color: '#555555',
+    }
+  },
+  paragraph: {
+    extend: {
+      color: '#555555',
+    }
+  },
+  button: {
+    fill: false,
+    extend: {
+      fontSize: '16px'
+    }
   }
 });
 
