@@ -48,7 +48,7 @@ const HeroBanner = () => (
               <Text size='medium' textAlign='left'>We send you three eggs (in the mail).</Text>
             </Box>
             <PrimaryButton
-              label='Get 3 Eggs'
+              label='Give Me The Eggs'
               primary={true}
               href='/shop'
               color='neutral-3'
