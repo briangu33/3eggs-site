@@ -8,6 +8,7 @@ import {
 } from 'grommet/es6'
 import { FormClose, Notification } from 'grommet-icons/es6'
 import HeaderBar from '../../components/header-bar/HeaderBar'
+import LandingGoodThing from '../../components/landing-good-thing/LandingGoodThing'
 import { Text } from 'grommet'
 import HeroBanner from './HeroBanner'
 
@@ -35,9 +36,28 @@ class Landing extends Component {
     return (
       <ResponsiveContext.Consumer>
         {size => (
-          <Box fill>
+          <Box>
             <HeaderBar/>
             <HeroBanner/>
+            <Box>
+              <Box direction='column' align='center' justify='center'>
+                <LandingGoodThing imagePos='left' headline="Perfect For Any Occasion">
+                    <Text justify='left' size='medium'>
+3 eggs is the perfect gift for holidays, birthdays, or special occasions. From a heartfelt token of appreciation to an ironic and slightly confusing welcome gift, we’ve got you covered.
+                    </Text>
+                </LandingGoodThing>
+                <LandingGoodThing imagePos='right' headline="Convenient And Portable">
+                    <Text size='medium'>
+No bulky charger or wires to weigh you down - 3 eggs fits snuggly in a purse or pocket. Our convenient and flexible design helps you take your eggs from home to travel in seconds.
+                    </Text>
+                </LandingGoodThing>
+                <LandingGoodThing imagePos='left' headline="Eco-friendly">
+                    <Text size='medium'>
+Each egg is 100% biodegradable and engineered with the environment in mind. When you’re done with your eggs, toss them in the compost bin to save the planet.
+                    </Text>
+                </LandingGoodThing>
+              </Box>
+            </Box>
           </Box>
         )}
       </ResponsiveContext.Consumer>
