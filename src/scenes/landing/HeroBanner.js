@@ -45,7 +45,7 @@ const HeroBanner = () => (
           >
             <Box>
               <Heading textAlign='left'>Welcome to your eggs.</Heading>
-              <Text size='medium' textAlign='left'>We send you three eggs (in the mail).</Text>
+              <Text size='medium' textAlign='left'>We send you three eggs. (In&nbsp;the&nbsp;mail.)</Text>
             </Box>
             <PrimaryButton
               label='Give Me The Eggs'
