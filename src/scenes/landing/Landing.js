@@ -48,7 +48,7 @@ class Landing extends Component {
               <Box direction='column' align='center' justify='center'>
                 <LandingGoodThing imagePos='left' headline="Convenient And Portable">
                     <Text size='medium'>
-No bulky charger or wires to weigh you down - 3 eggs fits snuggly in a purse or pocket. Our convenient and flexible design helps you take your eggs from home to travel in seconds.
+No bulky charger or wires to weigh you down - 3 eggs fits snugly in a purse or shoe. Our convenient and flexible design helps you take your eggs from home to travel in seconds.
                     </Text>
                     <Image
                       width='100%'
