@@ -39,7 +39,7 @@ class LandingGoodThing extends Component {
         width='750px'
         height='300px'
         margin={{
-          vertical: 'medium'
+          top: 'small'
         }}
       >
         <Box
@@ -50,7 +50,7 @@ class LandingGoodThing extends Component {
         >
           {this.props.imagePos === 'right' && (
           <GoodThingText headline={this.props.headline}>
-            {this.props.children}
+            {this.props.children[0]}
           </GoodThingText>
           )}
           <Box
@@ -68,18 +68,19 @@ class LandingGoodThing extends Component {
               left: 'small',
               right: 'small'
             }}
-            background='accent-1'
+            background='white'
           >
             <Box
               width='300px'
               gap='large'
-              background='accent-1'
+              background='white'
             >
+              {this.props.children[1]}
             </Box>
           </Box>
           {this.props.imagePos === 'left' && (
           <GoodThingText headline={this.props.headline}>
-            {this.props.children}
+            {this.props.children[0]}
           </GoodThingText>
           )}
         </Box>
