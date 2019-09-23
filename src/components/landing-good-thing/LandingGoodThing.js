@@ -1,15 +1,9 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import {
   Box,
-  Button,
   Heading,
-  Image,
-  Menu,
-  ResponsiveContext,
-  Text,
-  ThemeContext,
 } from 'grommet';
+import ScreenSizeContext from '../ScreenSizeContext'
 
 class GoodThingText extends Component {
   render () {
@@ -32,7 +26,43 @@ class GoodThingText extends Component {
   }
 }
 
-class LandingGoodThing extends Component {
+class LandingGoodThingMobile extends Component {
+  render () {
+    return (
+      <Box
+        width='100%'
+        margin={{
+          top: 'small'
+        }}
+      >
+        <Box
+          fill
+          align='center'
+          justify='center'
+          direction='column'
+          pad={{
+            vertical: 'small',
+            horizontal: 'medium',
+          }}
+          gap='small'
+        >
+          <Box
+            align='center'
+            justify='center'
+            background='white'
+          >
+            {this.props.children[1]}
+          </Box>
+          <GoodThingText headline={this.props.headline}>
+            {this.props.children[0]}
+          </GoodThingText>
+        </Box>
+      </Box>
+    )
+  }
+}
+
+class LandingGoodThingWeb extends Component {
   render () {
     return (
       <Box
@@ -88,5 +118,12 @@ class LandingGoodThing extends Component {
     )
   }
 }
+
+const LandingGoodThing = (props) => (
+  <ScreenSizeContext.Consumer>
+    { screenSize => screenSize.width > 768 ?
+      (<LandingGoodThingWeb {...props} />) : (<LandingGoodThingMobile {...props} />) }
+  </ScreenSizeContext.Consumer>
+)
 
 export default LandingGoodThing;

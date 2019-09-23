@@ -112,7 +112,7 @@ const smallHeaderBar = (
       direction='row'
       align='center'
       justify='start'
-      basis='1/3'
+      basis='32%'
     >
       <Menu
         icon={<MenuIcon/>}
@@ -144,8 +144,8 @@ const smallHeaderBar = (
       direction='row'
       align='center'
       justify='center'
-      basis='1/3'
-      height='40px'
+      basis='30%'
+      height='36px'
     >
       <Image
         src={logoBlack}
@@ -156,7 +156,7 @@ const smallHeaderBar = (
       direction='row'
       align='center'
       justify='end'
-      basis='1/3'
+      basis='38%'
     >
       <Button
         label='Shop'

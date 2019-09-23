@@ -3,6 +3,7 @@ import React from 'react'
 import { Heading, Image, Text } from 'grommet'
 import threeEggs from '../../res/3-eggs-light.png'
 import styled from 'styled-components'
+import ScreenSizeContext from '../../components/ScreenSizeContext'
 
 const PrimaryButton = styled(Button)`
   background-color: #597579;
@@ -12,9 +13,51 @@ const PrimaryButton = styled(Button)`
   line-height: 36px;
   display: inline-block;
   font-weight: bold;
+  width: 300px;
 `
 
-const HeroBanner = () => (
+const HeroBannerMobile = (
+  <Box direction='column' justify='start' align='center' height='600px'>
+    <Box
+      fill
+      pad='medium'
+    >
+      <Box
+        fill
+        align='center'
+        justify='around'
+        direction='column'
+        background='accent-1'
+        round='medium'
+        pad='large'
+      >
+        <Box>
+          <Heading level='1' textAlign='center'>It's three eggs.</Heading>
+          <Text size='medium' textAlign='center'>We send you three eggs. (In&nbsp;the&nbsp;mail.)</Text>
+        </Box>
+        <Box
+          width='100%'
+          align='center'
+          justify='center'
+        >
+          <Image
+            width='100%'
+            fit='contain'
+            src={threeEggs}
+          />
+        </Box>
+        <PrimaryButton
+          label='Give Me The Eggs'
+          primary={true}
+          href='/shop'
+          color='neutral-3'
+        />
+      </Box>
+    </Box>
+  </Box>
+)
+
+const HeroBannerWeb = (
   <Box direction='column' justify='start' align='center' height='600px'>
     <Box
       fill
@@ -75,6 +118,12 @@ const HeroBanner = () => (
       </Box>
     </Box>
   </Box>
+);
+
+const HeroBanner = () => (
+  <ScreenSizeContext.Consumer>
+    { screenSize => screenSize.width > 768 ? HeroBannerWeb : HeroBannerMobile }
+  </ScreenSizeContext.Consumer>
 );
 
 export default HeroBanner;
