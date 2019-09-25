@@ -31,10 +31,7 @@ const HeroBannerMobile = (
         round='medium'
         pad='large'
       >
-        <Box>
-          <Heading level='1' textAlign='center'>It's three eggs.</Heading>
-          <Text size='medium' textAlign='center'>We send you three eggs. (In&nbsp;the&nbsp;mail.)</Text>
-        </Box>
+        <Heading level='1' textAlign='center'>It's three eggs.</Heading>
         <Box
           width='100%'
           align='center'
@@ -46,6 +43,7 @@ const HeroBannerMobile = (
             src={threeEggs}
           />
         </Box>
+        <Text size='medium' textAlign='center'>We send you three eggs. (In&nbsp;the&nbsp;mail.)</Text>
         <PrimaryButton
           label='Give Me The Eggs'
           primary={true}
