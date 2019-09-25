@@ -15,6 +15,7 @@ import eco from '../../res/eco.png'
 import portable from '../../res/portable.png'
 import { Text } from 'grommet'
 import HeroBanner from './HeroBanner'
+import TestimonialCarousel from '../../components/testimonial-carousel/TestimonialCarousel'
 
 class Landing extends Component {
   state = {
@@ -23,9 +24,12 @@ class Landing extends Component {
 
   render() {
     return (
-      <Box>
+      <Box
+        direction='column'
+      >
         <HeaderBar/>
         <HeroBanner/>
+        <TestimonialCarousel/>
         <Box>
           <Box direction='column' align='center' justify='center'>
             <LandingGoodThing imagePos='left' headline="Convenient And Portable">

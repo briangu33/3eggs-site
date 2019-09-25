@@ -56,7 +56,7 @@ const HeroBannerMobile = (
 )
 
 const HeroBannerWeb = (
-  <Box direction='column' justify='start' align='center' height='600px'>
+  <Box direction='column' justify='start' align='center' height='700px'>
     <Box
       fill
       pad='medium'
@@ -67,10 +67,10 @@ const HeroBannerWeb = (
         justify='center'
         direction='row'
         background='accent-1'
-        round='medium'
+        round='small'
       >
         <Box
-          basis='40%'
+          basis='35%'
           align='start'
           justify='center'
           direction='column'
@@ -97,7 +97,7 @@ const HeroBannerWeb = (
           </Box>
         </Box>
         <Box
-          basis='60%'
+          basis='65%'
           height='100%'
           align='center'
           justify='center'
