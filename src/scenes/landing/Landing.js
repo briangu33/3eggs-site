@@ -16,6 +16,7 @@ import portable from '../../res/portable.png'
 import { Text } from 'grommet'
 import HeroBanner from './HeroBanner'
 import TestimonialCarousel from '../../components/testimonial-carousel/TestimonialCarousel'
+import Press from '../../components/press/Press'
 
 class Landing extends Component {
   state = {
@@ -64,6 +65,7 @@ Each egg is 100% biodegradable and engineered with the environment in mind. When
             </LandingGoodThing>
           </Box>
         </Box>
+        <Press/>
       </Box>
     );
   }
