@@ -17,7 +17,9 @@ const theme = deepMerge(grommet, {
       brand: '#ffaf54',
       'accent-1': '#73ffff',
       'accent-2': '#b973ff',
-      text: '#555555'
+      text: '#555555',
+      'dark-1': '#151515',
+      'dark-2': '#555555'
     },
     font: {
       family: 'Circular Pro',

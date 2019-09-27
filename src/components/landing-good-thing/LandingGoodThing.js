@@ -66,54 +66,37 @@ class LandingGoodThingWeb extends Component {
   render () {
     return (
       <Box
-        width='750px'
-        height='300px'
+        width='850px'
+        height='400px'
         margin={{
           top: 'small'
         }}
+        align='center'
+        justify='center'
+        direction='row'
       >
+        {this.props.imagePos === 'right' && (
+        <GoodThingText headline={this.props.headline}>
+          {this.props.children[0]}
+        </GoodThingText>
+        )}
         <Box
-          fill
-          align='center'
+          width='400px'
+          align='start'
           justify='center'
-          direction='row'
+          pad='small'
+          margin={{
+            horizontal: 'small'
+          }}
+          background='white'
         >
-          {this.props.imagePos === 'right' && (
-          <GoodThingText headline={this.props.headline}>
-            {this.props.children[0]}
-          </GoodThingText>
-          )}
-          <Box
-            basis='40%'
-            height='100%'
-            align='start'
-            justify='center'
-            direction='column'
-            pad={{
-              vertical: 'small',
-              left: 'small',
-              right: 'small'
-            }}
-            margin={{
-              left: 'small',
-              right: 'small'
-            }}
-            background='white'
-          >
-            <Box
-              width='300px'
-              gap='large'
-              background='white'
-            >
-              {this.props.children[1]}
-            </Box>
-          </Box>
-          {this.props.imagePos === 'left' && (
-          <GoodThingText headline={this.props.headline}>
-            {this.props.children[0]}
-          </GoodThingText>
-          )}
+          {this.props.children[1]}
         </Box>
+        {this.props.imagePos === 'left' && (
+        <GoodThingText headline={this.props.headline}>
+          {this.props.children[0]}
+        </GoodThingText>
+        )}
       </Box>
     )
   }
