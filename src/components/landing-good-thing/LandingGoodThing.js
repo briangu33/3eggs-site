@@ -19,7 +19,7 @@ class GoodThingText extends Component {
           right: 'medium'
         }}
       >
-        <Heading size='small' alignSelf='start' textAlign='left'>{this.props.headline}</Heading>
+        <Heading level='3' alignSelf='start' textAlign='left'>{this.props.headline}</Heading>
         {this.props.children}
       </Box>
     );
@@ -67,7 +67,6 @@ class LandingGoodThingWeb extends Component {
     return (
       <Box
         width='850px'
-        height='400px'
         margin={{
           top: 'small'
         }}

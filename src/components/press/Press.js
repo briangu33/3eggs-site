@@ -14,15 +14,12 @@ class Press extends Component {
         width='100%'
       >
         <Box
-          width='850px'
-          height='400px'
           margin={{
             top: 'small'
           }}
           justify='start'
           direction='column'
         >
-          <Heading level='2' margin={{ bottom: 'none' }}>The Eggs They Are On The News</Heading>
           <Box
             width='100%'
             direction='row'

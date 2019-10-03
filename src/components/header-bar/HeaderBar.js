@@ -28,13 +28,14 @@ const themeExtension = {
 const bigHeaderBar = (
   <Box
     tag='header'
+    width='100%'
     direction='row'
     align='center'
     justify='between'
-    background='light'
+    background='light-1'
     pad={{ left: 'medium', right: 'small', vertical: '12px' }}
     elevation='medium'
-    style={{ zIndex: '1' }}
+    style={{ zIndex: '1', position: 'fixed' }}
   >
     <Box
       direction='row'
@@ -100,13 +101,14 @@ const bigHeaderBar = (
 const smallHeaderBar = (
   <Box
     tag='header'
+    width='100%'
     direction='row'
     align='center'
     justify='between'
-    background='light'
+    background='light-1'
     pad={{ left: 'medium', right: 'small', vertical: '12px' }}
     elevation='medium'
-    style={{ zIndex: '1' }}
+    style={{ zIndex: '1', position: 'fixed' }}
   >
     <Box
       direction='row'
