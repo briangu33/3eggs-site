@@ -88,6 +88,7 @@ class LandingGoodThingWeb extends Component {
             horizontal: 'small'
           }}
           background='white'
+          round='large'
         >
           {this.props.children[1]}
         </Box>
