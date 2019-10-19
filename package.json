@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@shopify/buy-button-js": "^1.0.4",
     "grommet": "^2.7.8",
     "grommet-icons": "^4.3.0",
     "react": "^16.9.0",
